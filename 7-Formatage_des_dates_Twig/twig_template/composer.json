@@ -1,0 +1,20 @@
+{
+    "name": "eakpo/twig_template",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Eakpo\\TwigTemplate\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Espero AKPOLI",
+            "email": "mongodbna@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "twig/twig": "^3.4",
+        "espero-soft/faker": "dev-master"
+    }
+}

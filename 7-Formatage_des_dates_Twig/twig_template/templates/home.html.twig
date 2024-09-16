@@ -1,0 +1,29 @@
+{% extends 'index.html.twig' %}
+
+{% block title %} Home - Welcome {% endblock %}
+
+
+
+{% block container %} 
+    <ul class="users flex wrap">
+        {% for user in users %}
+
+            <li class="user-item"> 
+                <div class="user-picture">
+                    <img src={{ user.cover}} width="300" height="300"  alt="Image de {{user.full_name}}">
+                </div>
+                <div class="user-details flex aic">
+                    <div class="user-image">
+                        <img src={{ user.picture }}  width="50" height="50" alt="Image de {{user.full_name}}">
+                    </div>
+                    <div class="user-names">
+                        <h3>{{ user.full_name}}</h3>
+                        <div class="createdAt">{{ user.createdAt | date("d/m/Y H:i:s") }}</div>
+                    </div>
+                </div>
+                
+            </li>
+
+        {% endfor %}
+    </ul>
+{% endblock %}
